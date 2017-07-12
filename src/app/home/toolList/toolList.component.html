@@ -1,0 +1,6 @@
+<div>
+    <h1>{{toolListObj.title}}</h1>
+    <div>
+        <button *ngFor="let k of toolListObj.list" (click)="clickTo(k)" >{{k}}</button>
+    </div>
+</div>

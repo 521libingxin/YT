@@ -1,0 +1,40 @@
+@import '../../css/lessbase.less';
+
+.home_main_left {
+  position: absolute;
+  top:@top_height;
+  left:0;
+  width:@left_and_right_line;
+  bottom:0;
+  background:@base2;
+  overflow: auto;
+}
+.home_main_right {
+  .Absolute(@top_height,0,0,@left_and_right_line);
+}
+.button_hover{
+  background:@base;
+}
+.home_right_title{
+  display: inline-block;
+  width:100px;
+  .Line_height(@right_top_height+(-20));
+  text-align: center;
+  button {
+    width:90px;
+  }
+}
+.home_right_top{
+  position:relative;
+  height:@right_top_height;
+  width:100%;
+  overflow: auto;
+}
+.home_right_top_box{
+  white-space: nowrap;
+}
+.home_right_body{
+  border-top:1px solid #000;
+  background:#fff;
+  .Absolute(@right_top_height,0,0,0);
+}

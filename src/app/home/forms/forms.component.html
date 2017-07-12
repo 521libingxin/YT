@@ -1,0 +1,46 @@
+<h1>表格类型{{formsObj}}</h1>
+<button (click)="downloadExcel()">下载Excel</button>
+<input type="file" (change)="importf($event)" />
+<div style="white-space:nowrap;width:100%;position:absolute;overflow-x:auto;" (mousemove)="changeMove($event)" (mouseup)="tdlineUp($event)" >
+<div style="height:50px">
+    <app-inputbox [(inputIn)]="inputCustomer" (inputChange)="inputChange()" ></app-inputbox>
+    <app-inputbox [(inputIn)]="inputFactory" (inputChange)="inputChange()" ></app-inputbox>
+    <app-date [dateObj] = "dateTime"></app-date>
+</div>
+    <div style="position:relative;">
+        <div class="tdclassbox" *ngFor="let i of trlist;let in = index;" [style.width.px]="i.width"  >
+            <div [ngClass]="{
+                borr : moveObj.hoverindex === in,
+                borl : moveObj.hoverindex === in-1,
+                rolspan: getrolespan(in),
+                tdclass:true}"
+                (mouseup)="mouseUp($event,in,i.width)"
+                [style.width.px]="i.width" 
+                (mousedown)="mouseClickDown(in)"
+                (mousemove)="mouseMove($event,in,i.width)"
+                (dragstart)="false">
+                    {{i.name}}
+            </div>
+            <div class="tdline" (mousedown)="tdlineDown($event,in)"></div>
+        </div>
+        <div class="tdclassparent" [ngStyle]="getparentStyle()">
+            {{listset.parentName}}
+        </div>
+    </div>
+    <table id="tabel_box" cellspacing="0">
+        <tr *ngFor="let j of ulList;let in = index;" >
+            <td *ngFor="let i of trlist" [style.width.px]="i.width -1" >
+                <span *ngIf="i.name === '行号'">{{in+1}}</span>
+                <a *ngIf="i.name === '操作'" (click)="addul(in)">新增</a>
+                <a *ngIf="i.name === '操作'" (click)="removeul(in)">删除</a>
+                <span *ngIf="i.name !== '行号' && i.name !== '操作'">{{j[i.name]}}</span>
+                {{getAdd(i.name,j[i.name])}}
+            </td>
+        </tr>
+        <tr>
+            <td  *ngFor="let i of trlist" [style.width.px]="i.width -1">
+                <span>{{addkeynew[i.name]}}</span>
+            </td>
+        </tr>
+    </table>
+</div>

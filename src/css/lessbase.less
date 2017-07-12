@@ -1,0 +1,25 @@
+@base: #f938ab;
+@base2: #f938ab;
+@base3: #666;
+
+@top_height: 50px;
+@left_and_right_line: 125px;
+@right_top_height:30px;
+.Line_height(@height) {
+  height:@height;
+  line-height: @height;
+}
+.Absolute(@top,@right,@bottom,@left) {
+    position:absolute;
+    top:@top;
+    right:@right;
+    bottom:@bottom;
+    left:@left;
+}
+.Relative(@top,@right,@bottom,@left){
+    position:relative;
+    top:@top;
+    right:@right;
+    bottom:@bottom;
+    left:@left;
+}

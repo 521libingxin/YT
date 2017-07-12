@@ -1,0 +1,31 @@
+<div style="position:relative;display:inline-block;height:50px;">
+    <input style="position:absolute;top:0;left:0;" [value]="datetime" (blur)="inputblur()" (focus)="morehide = true" />
+    <div *ngIf="morehide" style="position:absolute;top:25px;
+    left:0;width: 210px;padding: 10px;
+    z-index:10;
+    background: #fff;border: 1px solid #000;"
+    (mouseover)="mouseover = true" 
+    (mouseleave)="mouseover = false"
+    >
+        <div>
+            <select [(ngModel)]="dateObj.month" (change)="goMonth()" >
+                <option *ngFor="let pow of monthList" [value]="pow">{{pow}}</option>
+            </select>
+        </div>
+        <div>
+            <div >
+                <button *ngFor="let j of td" style="width:30px;">{{j}}</button>
+            </div>
+            <div *ngFor="let i of tr">
+                <button [ngClass]="buttonClass((i-1)*7 + in)" (click)="goDay((i-1)*7 + in)" *ngFor="let j of td;let in = index;" style="width:30px;">
+                    {{getDay((i-1)*7 + in)}}
+                </button>
+            </div>
+        </div>
+        <div>
+            <button (click)="goYear(dateObj.year - 1)">{{dateObj.year - 1}}</button>
+            <button >{{dateObj.year}}</button>
+            <button (click)="goYear(dateObj.year + 1)">{{dateObj.year + 1}}</button>
+        </div>
+    </div>
+</div>

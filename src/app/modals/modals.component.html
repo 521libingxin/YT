@@ -1,0 +1,7 @@
+<div *ngIf="isopen">
+    <div *ngFor="let i of modalList">
+        <app-modaltype1 *ngIf="i.type == 1"></app-modaltype1>
+        <app-modaltype2 *ngIf="i.type == 2"></app-modaltype2>
+        <app-modaltype3 *ngIf="i.type == 3"></app-modaltype3>
+    </div>
+</div>

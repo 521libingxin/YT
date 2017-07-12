@@ -1,0 +1,64 @@
+
+.displaynone{
+  display: none;
+}
+td{
+  border-left:1px solid #fff;
+  background:#999;
+  height:30px;
+  line-height:30px;
+  border-bottom:1px solid #fff;
+  overflow: hidden;
+}
+.tdclassbox{
+  position:relative;
+  display: inline-block;
+}
+.tdclass{
+  cursor: pointer;
+  background:#999;
+  height:30px;
+  text-align: center;
+  overflow:hidden;
+  line-height:30px;
+  display: inline-block;
+  border-right:1px solid #fff;
+  border-left:1px solid #fff;
+}
+.tdclassparent{
+  cursor: pointer;
+  background:#999;
+  height:29px;
+  text-align: center;
+  overflow:hidden;
+  line-height:29px;
+  display: inline-block;
+  border-right:1px solid #fff;
+  border-left:1px solid #fff;
+}
+.rolspan{
+  height:60px;
+  line-height:60px;
+}
+.rolbottom{
+  position:relative;
+  top:30px;
+}
+.borr{
+  border-right:1px dashed #000;
+}
+.borl{
+  border-left:1px dashed #000;
+}
+.tdclasspointer{
+  cursor:ew-resize;
+}
+.tdline{
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:4px;
+  right:-3px;
+  cursor:ew-resize;
+  z-index: 10;
+}

@@ -1,0 +1,8 @@
+<div style="position:relative;height:50px;width:200px;display:inline-block;z-index:10;" (mouseover)="mouseover = true" (mouseleave)="mouseover = false" >
+    <input style="position:absolute;top:0;left:0;" type="text" [value]="inputIn.value" (focus)="searchval($event)" (keyup)="searchval($event)" (blur)="inputblur()" />
+    <ul style="border-bottom:1px solid #000;border-right:1px solid #000;border-left:1px solid #000;position:absolute;top:22px;left:0;background:#fff;width:100%;" *ngIf="searchList.length > 0" >
+        <li (click)="addval(i.search)" style="border-top:1px solid #ccc;" *ngFor="let i of searchList">
+            {{i.search}}
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,36 @@
+<app-hometop></app-hometop>
+<div id="haha" class="home_main_left">
+    <ul>
+        <li *ngFor="let i of menuList" (click)="clickTo(i)" >
+            {{menuBase[i].name}}
+        </li>
+    </ul>
+    <button (click)="openModal()">打开模态框</button>
+</div>
+<div class="home_main_right">
+    <div class="home_right_top">
+        <ul class="home_right_top_box">
+            <li class="home_right_title" *ngFor="let i of showList; let j = index" >
+                <button [class.button_hover]="this.showListIndex == j" (click)="this.showListIndex = j">{{i.name}}</button>
+            </li>
+        </ul>
+    </div>
+    <ul class="home_right_body">
+        <li class="home_right_body_list" *ngFor="let i of showList; let j = index" >
+            <!--<div *ngIf = "j == showListIndex" >
+            <button >{{j}}</button>
+            </div>-->
+            <div [style.display]="j == showListIndex ? 'block' : 'none'" >
+                <div *ngIf = "i.childs != undefined">
+                    <!--<button *ngFor="let k of i.childs" (click)="clickTo(k)">{{menuBase[k].name}}</button>-->
+                    <app-toollist *ngFor="let k of i.childs" [toolListObj]="k" (toolListClick)="clickTo($event)" ></app-toollist>
+                    <!--{{i.showType}}-->
+                </div>
+                <div *ngIf = "i.childs == undefined">
+                    <app-forms [formsObj]="i.showType"></app-forms>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<app-modals></app-modals>
