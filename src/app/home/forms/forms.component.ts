@@ -1,7 +1,6 @@
 
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { YilaiService } from '../../service/yilai.service';
-import { HomeTopComponent } from '../homeTop/homeTop.component';
 declare var XLSX;
 declare var startsave;
 @Component({
@@ -11,7 +10,7 @@ declare var startsave;
   styleUrls: ['./forms.component.css'],
   providers: [YilaiService]
 })
-export class FormsComponent extends HomeTopComponent implements OnInit, AfterViewInit {
+export class FormsComponent implements OnInit, AfterViewInit {
   @Input() formsObj: any;
   inputCustomer = {
     'type': 'customer',
@@ -108,8 +107,6 @@ export class FormsComponent extends HomeTopComponent implements OnInit, AfterVie
     //yl.haha();
    }*/
    constructor(private yl: YilaiService) {
-     super();
-     super.bibi();
      yl.haha();
    }
   ngOnInit() {}
