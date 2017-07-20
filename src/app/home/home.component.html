@@ -1,7 +1,12 @@
 <head></head>
 <div id="haha" class="home_main_left">
+    <div class="checklistall" >
+        <ng-container *ngFor="let c of checkList.list; let i = index;">
+            <div [ngClass]="{'checkhover':i == checkList.index,'checklist':true}" (click)="checkList.index = i" >{{c}}</div>
+        </ng-container>
+    </div>
     <ul>
-        <li *ngFor="let i of menuList" (click)="clickTo(i)" >
+        <li class="checklistli" *ngFor="let i of menuList" (click)="clickTo(i)" >
             {{menuBase[i].name}}
         </li>
     </ul>

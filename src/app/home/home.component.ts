@@ -60,6 +60,10 @@ export class HomeComponent implements OnInit {
       'showType': '3',
     }
   };
+  checkList = {
+    'index': 0,
+    'list':['系统', '常用']
+  };
   menuList: Array<Object> = ['biaoti1', 'biaoti2'];
   showList = [];
   showObj = {};
