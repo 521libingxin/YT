@@ -68,6 +68,7 @@ export class HomeComponent implements OnInit {
   showList = [];
   showObj = {};
   showListIndex = -1;
+  leftListKey = '';
   constructor(private modal: ModalsService) {}
   ngOnInit() {
     this.clickTo('biaoti1');
@@ -87,6 +88,7 @@ export class HomeComponent implements OnInit {
       this.showList.push(t_obj);
       this.showListIndex = this.showList.length - 1;
     }else {
+      this.leftListKey = key;
       if (this.showObj[key] === undefined) {
         this.showList.push(t_obj);
         this.showListIndex = this.showList.length - 1;
@@ -95,5 +97,6 @@ export class HomeComponent implements OnInit {
         this.showListIndex = this.showObj[key];
       }
     }
+    console.log(this.leftListKey);
   }
 }

@@ -5,16 +5,25 @@
 @top_height: 50px;
 @left_and_right_line: 125px;
 @right_top_height:30px;
+
 .Line_height(@height) {
   height:@height;
   line-height: @height;
 }
 .Absolute(@top,@right,@bottom,@left) {
     position:absolute;
-    top:@top;
+    top:@top ;
     right:@right;
     bottom:@bottom;
     left:@left;
+}
+.abc(a,@abc,@bcd) when(@abc > 40){
+    width:@abc;
+    height:@bcd;
+}
+.abc(b,@abc,@bcd){
+    width:@bcd;
+    height:@abc;
 }
 .Relative(@top,@right,@bottom,@left){
     position:relative;

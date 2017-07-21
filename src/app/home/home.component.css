@@ -1,0 +1,121 @@
+.home_main_left {
+  position: absolute;
+  top: 50px;
+  right: '';
+  bottom: 0;
+  left: 0;
+  width: 125px;
+  background: #313841;
+  overflow: auto;
+}
+.testabc {
+  width: 50px;
+  height: 80px;
+}
+.testabc2 {
+  width: 80px;
+  height: 40px;
+}
+.home_main_right {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+  left: 125px;
+}
+.button_hover {
+  background: #313841;
+}
+.home_right_title {
+  display: inline-block;
+  width: 100px;
+  height: 10px;
+  line-height: 10px;
+  text-align: center;
+}
+.home_right_title button {
+  width: 90px;
+}
+.home_right_top {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  overflow: auto;
+}
+.home_right_top_box {
+  white-space: nowrap;
+}
+.home_right_body {
+  border-top: 1px solid #000;
+  background: #fff;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.checklistall {
+  width: 106px;
+  height: 28px;
+  border: 1px solid #346ac9;
+  margin: 18px auto;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.checklist {
+  float: left;
+  width: 53px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+}
+.checkhover {
+  background: #346ac9;
+}
+.checklistli {
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 18px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.checklisthover {
+  background: #346ac9;
+}
+.checklisthover .checklisttriangle {
+  display: block;
+}
+.checklisticon {
+  width: 50px;
+  height: 40px;
+  float: left;
+}
+.checklisttext {
+  height: 40px;
+  font-size: 14px;
+  color: #fff;
+  float: left;
+}
+.checklisttriangle {
+  display: none;
+  border-right: 13px solid #fff;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  position: absolute;
+  top: 7px;
+  right: 0;
+  bottom: '';
+  left: '';
+}
+.shopicon {
+  width: 25px;
+  height: 25px;
+  margin: 7px 12px;
+  background: url('assets/img/shopping-cart.png') no-repeat center center / 100% 100%;
+}
+.checklisthover .shopicon {
+  background: url('assets/img/shopping-cart-hover.png') no-repeat center center / 100% 100%;
+}

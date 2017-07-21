@@ -1,13 +1,16 @@
 @import '../../css/lessbase.less';
 
 .home_main_left {
-  position: absolute;
-  top:@top_height;
-  left:0;
+  .Absolute(@top_height,'',0,0);
   width:@left_and_right_line;
-  bottom:0;
   background:@base2;
   overflow: auto;
+}
+.testabc{
+  .abc(a,50px,80px);
+}
+.testabc2{
+  .abc(b,40px,80px);
 }
 .home_main_right {
   .Absolute(@top_height,0,0,@left_and_right_line);
@@ -43,7 +46,7 @@
   height:28px;
   border:1px solid #346ac9;
   margin:18px auto;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor:pointer;
 }
 .checklist{
@@ -59,8 +62,43 @@
   background:#346ac9;
 }
 .checklistli{
+  position:relative;
   height:40px;
   line-height:40px;
+  margin:0 0 18px 10px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.checklisthover{
   background:#346ac9;
-  margin-bottom: 10px;
+}
+.checklisthover .checklisttriangle{
+  display:block;
+}
+.checklisticon{
+  width:50px;
+  height:40px;
+  float:left;
+}
+.checklisttext{
+  height:40px;
+  font-size:14px;
+  color:#fff;
+  float:left;
+}
+.checklisttriangle{
+  display:none;
+  border-right:13px solid #fff;
+  border-top:12px solid transparent;
+  border-bottom:12px solid transparent;
+  .Absolute(7px,0,'','');
+}
+.shopicon{
+  width:25px;
+  height:25px;
+  margin:7px 12px;
+  background:url('assets/img/shopping-cart.png') no-repeat center center / 100% 100%;
+}
+.checklisthover .shopicon{
+  background:url('assets/img/shopping-cart-hover.png') no-repeat center center / 100% 100%;
 }
