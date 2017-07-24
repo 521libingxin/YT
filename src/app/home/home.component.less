@@ -4,7 +4,6 @@
   .Absolute(@top_height,'',0,0);
   width:@left_and_right_line;
   background:@base2;
-  overflow: auto;
 }
 .testabc{
   .abc(a,50px,80px);
@@ -72,7 +71,8 @@
 .checklisthover{
   background:#346ac9;
 }
-.checklisthover .checklisttriangle{
+.checklisthover .checklisttriangle,
+.checklisthover .checklistrightbox{
   display:block;
 }
 .checklisticon{
@@ -101,4 +101,35 @@
 }
 .checklisthover .shopicon{
   background:url('assets/img/shopping-cart-hover.png') no-repeat center center / 100% 100%;
+}
+
+.checklistrightbox{
+  display: none;
+  position:absolute;
+  left:115px;
+  background:#fff;
+  padding:15px 0 0 15px;
+  z-index: 100;
+  border-top:1px solid #e1e1e1;
+  border-bottom:1px solid #e1e1e1;
+  box-shadow: 10px 0px 15px 1px #999;
+}
+.checklistshawbox{
+  position:absolute;
+  right:-10px;
+  width:10px;
+  top:-1px;
+  bottom:-1px;
+  background:#fff;
+  border:1px solid #e1e1e1;
+  border-left:none;
+}
+.checllistli{
+  width:150px;
+  height:100px;
+  border-right:1px dashed #d1d1d1;
+  display:inline-block;
+}
+.checklistul{
+  white-space:nowrap;
 }
