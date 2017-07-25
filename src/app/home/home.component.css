@@ -7,14 +7,6 @@
   width: 125px;
   background: #313841;
 }
-.testabc {
-  width: 50px;
-  height: 80px;
-}
-.testabc2 {
-  width: 80px;
-  height: 40px;
-}
 .home_main_right {
   position: absolute;
   top: 50px;
@@ -22,12 +14,30 @@
   bottom: 0;
   left: 125px;
 }
+.button_none {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  height: 30px;
+  border: 1px solid #dbdbdb;
+}
+.button_hover_line {
+  height: 3px;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  bottom: '';
+  left: -1px;
+  background: #346ac9;
+}
 .button_hover {
-  background: #313841;
+  background: #e2e9ef;
+  border-bottom: 1px solid #e2e9ef;
 }
 .home_right_title {
   display: inline-block;
-  width: 100px;
+  margin-right: 3px;
   height: 10px;
   line-height: 10px;
   text-align: center;
@@ -40,15 +50,16 @@
   height: 30px;
   width: 100%;
   overflow: auto;
+  z-index: 1;
 }
 .home_right_top_box {
   white-space: nowrap;
 }
 .home_right_body {
-  border-top: 1px solid #000;
-  background: #fff;
+  border-top: 1px solid #dbdbdb;
+  background: #e2e9ef;
   position: absolute;
-  top: 30px;
+  top: 29px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -124,7 +135,7 @@
   position: absolute;
   left: 115px;
   background: #fff;
-  padding: 15px 0 0 15px;
+  padding: 15px 0 15px 15px;
   z-index: 100;
   border-top: 1px solid #e1e1e1;
   border-bottom: 1px solid #e1e1e1;
@@ -140,12 +151,25 @@
   border: 1px solid #e1e1e1;
   border-left: none;
 }
-.checllistli {
+.checklisthoverli {
   width: 150px;
-  height: 100px;
   border-right: 1px dashed #d1d1d1;
   display: inline-block;
 }
 .checklistul {
   white-space: nowrap;
+}
+.checklistli_top {
+  height: 35px;
+  line-height: 35px;
+  color: #346ac9;
+  font-size: 16px;
+  padding-left: 22px;
+}
+.checklistli_list {
+  margin: 10px 0;
+  height: 18px;
+  line-height: 18px;
+  padding-left: 22px;
+  font-size: 12px;
 }

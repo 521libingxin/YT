@@ -6,14 +6,28 @@
         </ng-container>
     </div>
     <ul>
-        <li class="checklistli" [ngClass]="{'checklisthover':leftListKey == i}" *ngFor="let i of menuList;let in = index;" (click)="clickTo(i)" >
+        <li class="checklistli" [ngClass]="{'checklisthover':leftListKey == i}"
+         *ngFor="let i of menuList;let in = index;"
+         (click)="clickTo(i)"
+         (mouseover)="menuBase[i].hover = true;"
+         (mouseleave)="menuBase[i].hover = true;" >
             <div class="checklisticon"><div class="shopicon"></div></div>
             <div class="checklisttext">{{menuBase[i].name}}</div>
-            <div class="checklisttriangle"></div>
-            <div class="checklistrightbox">
+            <div class="checklisttriangle" *ngIf="menuBase[i].hover"></div>
+            <div class="checklistrightbox" *ngIf="menuBase[i].hover">
                 <div class="checklistul">
-                    <div class="checllistli"></div>
-                    <div class="checllistli"></div>
+                    <div class="checklisthoverli">
+                        <div class="checklistli_top">订单申请</div>
+                        <div class="checklistli_list">采购订单</div> 
+                        <div class="checklistli_list">采购订单</div> 
+                        <div class="checklistli_list">采购订单</div>   
+                    </div>
+                    <div class="checklisthoverli">
+                        <div class="checklistli_top">业务记账</div>
+                        <div class="checklistli_list">采购订单</div> 
+                        <div class="checklistli_list">采购订单</div> 
+                        <div class="checklistli_list">采购订单</div>  
+                    </div>
                 </div>
                 <div class="checklistshawbox"></div>
             </div>
@@ -27,7 +41,10 @@
     <div class="home_right_top">
         <ul class="home_right_top_box">
             <li class="home_right_title" *ngFor="let i of showList; let j = index" >
-                <button [class.button_hover]="this.showListIndex == j" (click)="this.showListIndex = j">{{i.name}}</button>
+                <button class="button_none" [class.button_hover]="this.showListIndex == j" (click)="this.showListIndex = j">
+                    <div class="button_hover_line" *ngIf="this.showListIndex == j"></div>
+                    <div>{{i.name}}</div>
+                </button>
             </li>
         </ul>
     </div>

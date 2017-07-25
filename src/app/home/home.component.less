@@ -5,21 +5,30 @@
   width:@left_and_right_line;
   background:@base2;
 }
-.testabc{
-  .abc(a,50px,80px);
-}
-.testabc2{
-  .abc(b,40px,80px);
-}
 .home_main_right {
   .Absolute(@top_height,0,0,@left_and_right_line);
 }
+.button_none{
+  position:relative;
+  margin:0;
+  padding:0;
+  background:#fff;
+  height:30px;
+  border:1px solid #dbdbdb;
+}
+.button_hover_line{
+  height:3px;
+  position:absolute;
+  .Absolute(-1px,-1px,'',-1px);
+  background:@basecolor4;
+}
 .button_hover{
-  background:@base;
+  background:@basecolor5;
+  border-bottom: 1px solid @basecolor5;
 }
 .home_right_title{
   display: inline-block;
-  width:100px;
+  margin-right:3px;
   .Line_height(@right_top_height+(-20));
   text-align: center;
   button {
@@ -31,14 +40,15 @@
   height:@right_top_height;
   width:100%;
   overflow: auto;
+  z-index: 1;
 }
 .home_right_top_box{
   white-space: nowrap;
 }
 .home_right_body{
-  border-top:1px solid #000;
-  background:#fff;
-  .Absolute(@right_top_height,0,0,0);
+  border-top:1px solid #dbdbdb;
+  background:#e2e9ef;
+  .Absolute(@right_top_height+(-1),0,0,0);
 }
 .checklistall{
   width:106px;
@@ -108,7 +118,7 @@
   position:absolute;
   left:115px;
   background:#fff;
-  padding:15px 0 0 15px;
+  padding:15px 0 15px 15px;
   z-index: 100;
   border-top:1px solid #e1e1e1;
   border-bottom:1px solid #e1e1e1;
@@ -124,12 +134,25 @@
   border:1px solid #e1e1e1;
   border-left:none;
 }
-.checllistli{
+.checklisthoverli{
   width:150px;
-  height:100px;
   border-right:1px dashed #d1d1d1;
   display:inline-block;
 }
 .checklistul{
   white-space:nowrap;
+}
+.checklistli_top{
+  height:35px;
+  line-height:35px;
+  color:#346ac9;
+  font-size:16px;
+  padding-left:22px;
+}
+.checklistli_list{
+  margin:10px 0;
+  height:18px;
+  line-height:18px;
+  padding-left:22px;
+  font-size:12px;
 }

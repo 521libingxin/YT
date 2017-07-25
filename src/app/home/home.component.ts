@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
       'name': '标题一',
       'type': 'parent',
       'showType': '0',
+      'hover': false,
       'childs': [
         {
           'title': '订单申请',
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
       'name': '标题二',
       'type': 'parent',
       'showType': '0',
+      'hover': false,
       'childs': [
         {
           'title': '业务记账',
